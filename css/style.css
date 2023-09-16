@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  width: auto;
 }
 
 html{
@@ -17,6 +18,7 @@ body {
   height: 40px;
   font-family: sans-serif;
   font-size: large;
+  cursor: pointer;
 }
 
 nav {
@@ -24,8 +26,9 @@ nav {
   background-color: rgb(16, 16, 16);
   /* height: 30px; */
   align-items: center;
- 
+  
 }
+
 
 .left,
 .right {
@@ -54,6 +57,7 @@ nav {
   color: white;
   padding: 8px;
 }
+
 
 .right button {
   float: right;
@@ -102,15 +106,14 @@ nav {
   margin-left: 0px;
 }
 
-a:hover {
-  color: #3dcfd3;
-}
-
-button:hover {
+.center a:hover {
   color: #3dcfd3;
   background-color: rgb(16, 16, 16);
-  border: 2px solid #3dcfd3;
+  border: 1px solid #3dcfd3;
+  border-radius: 2px;
 }
+
+
 /*--------------------------------------------------------------contact me starts here!*/
 .contact-me {
   font-family: sans-serif;
@@ -125,8 +128,16 @@ button:hover {
   padding-bottom: 30px;
 }
 .contact-me .container .heading {
-  font-size: 51px;
+  font: 300 60px 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
+
+.contact-me .container p{
+  font: 700 12px 'Lato', sans-serif;
+  letter-spacing: 2px;
+}
+
 
 .contact-me .container .contact {
   display: flex;
@@ -155,6 +166,10 @@ button:hover {
  
 }
 
+.btn-success{
+  background-color: green;
+}
+
 
 .contact-me .container .contact .card img {
   /* background-color: blue; */
@@ -175,6 +190,42 @@ footer {
   padding: 30;
 }
 
+
+.contact-form button{
+  margin: 8px;
+  background-color: #42d33d;
+  color: rgb(255, 250, 250);
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
+.contact-form button:hover{
+  color: #42d33d;
+  background-color: rgb(255, 250, 250);
+  border: 3px solid #42d33d;
+  
+}
+
+
+
+.contact-form .container input, .contact-form .container textarea{
+  width: 50%;
+  border-radius: 5px ;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 1px solid gray;
+  outline: none;
+  padding: 5px;
+  font: 700 12px 'Lato', sans-serif;
+  letter-spacing: 2px;
+  
+}
+
+
+.contact-form .container input{
+ height: 40px;
+ 
+}
 /* ---------------------------------------------------------Education */
 section.education{
   background-color: rgb(16, 16, 16);
@@ -340,3 +391,14 @@ section.skills .container .skl progress{
   width: 90px;
   height: 20px;
 }
+
+button:hover {
+  color: #3dcfd3;
+  background-color: rgb(16, 16, 16);
+  border: 2px solid #3dcfd3;
+}
+
+.text-center{
+  text-align: center;
+}
+

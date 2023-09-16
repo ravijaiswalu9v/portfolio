@@ -4,9 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="/css/chat.css"> -->
   </head>
   <body>
     <header>
+      
         <div class="container">
           <!-- ----------------------------------------------------------nav bar -->
             <nav>
@@ -37,7 +39,7 @@
                           <h2>I'm a Creative <br> <span>Developer</span></h2>
                           <p>I have done graduation in Bachelors in Computer Application (B.C.A)  from the Mahatama Gandhi Kashi Vidyapith University varanasi in <span style="color: #FF9933;">IN</span>D<span style=color:#138808>IA</span> ,and I am very passionate about my job, I love sports and Gyming as the fitness is very essential part of my life. </p>
                           <div>
-                            <a href="resume/Ravi_resume_updated_28-07-2023(A41) -.pdf" target="_blank">
+                            <a href="resume/Ravi_resume_updated_04-09-2023(A51).pdf" target="_blank">
                               <button class="btn">Download CV</button>
                             </a>
                           </div>
@@ -62,21 +64,21 @@
         <h1>2019-2022</h1>
         <h2>Bachelor in Computer Application  &nbsp;<span class="course">(B.C.A)</span></h2>
         <p class="ins">Mahatama Gandhi Kashi Vidyapith University</p>
-        <p>The journy was awesome as, My base of Programming planted during this session and growing.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt voluptate quaerat inventore.</p>
        </div>
 
        <div class="edu">
         <h1>2017-2019</h1>
         <h2>Senior Secondary Education  &nbsp;<span class="course">12<sup>th</sup></span></h2>
         <p class="ins">Laxmi public school</p>
-        <p>The journy was awesome as, I learn how to do hard work with passion and achieve it. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt voluptate quaerat inventore.</p>
        </div>
 
        <div class="edu">
         <h1>2015-2017</h1>
         <h2>Metriculation   &nbsp;<span class="course">10<sup>th</sup></span></h2>
         <p class="ins">Laxmi Public School</p>
-        <p>The journy was awesome with mathematics and Computer, as I love these subjects.  </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt voluptate quaerat inventore.</p>
        </div>
 
 
@@ -244,7 +246,29 @@
           </div>
         </div>
       </div>
+      <div class="contact-form">
+            <div class="container">
+                <input type="text" id="name" placeholder="Your name..">
+            </div>
+            <div class="container">
+              <input type="email" id="email" placeholder="Your email..">
+          </div>
+          <div class="container">
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message.."></textarea>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-success" type="submit" onclick="sendEmail()">Submit</button>
+        </div>
+      </div>
+
+      
+
     </section>
+
+
+    
+      
+      
    
 
      <!-- ----------------------------------------------------------footer Section -->
@@ -262,5 +286,20 @@
         </div>
       </div>
     </footer>
+
+
+
+
+    <script src="javaScript/engine.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("yk6vRTCeNqkJ-dYEN");
+      })();
+    </script> 
   </body>
 </html>
