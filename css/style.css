@@ -392,7 +392,10 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  nav .right {
+  nav .right a[href="#home1"],
+  nav .right a[href="#education1"],
+  nav .right a[href="#certificate1"],
+  nav .right a[href="#skill1"]{
     display: none;
   }
 
@@ -405,7 +408,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 448px) {
 
   section.home,
   section.education,
@@ -420,6 +423,7 @@ footer {
   }
 
   nav {
-    padding-left: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
