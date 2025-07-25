@@ -2,11 +2,12 @@
   /* --primary: #3dcfd3; */
   --primary: #2a9d8f;
   --secondary: #ffffff;
-  --tertiory: #264653;
+  /* --tertiory: #264653; */
+  --tertiory: #1F3A93;
   --dark: #242424;
   --grey: #565656;
-  --yellow: #e9c46a;
-  --orange: #f4a261;
+  --yellow: rgb(231, 201, 80);
+  --orange: #FF6B35;
   --brick: #e76f51;
 }
 
@@ -38,7 +39,9 @@ section {
   outline: none;
   border: none;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 nav {
@@ -51,11 +54,9 @@ nav {
   height: 80px;
 }
 
-nav .left span {
-  font-size: 32px;
-  /* color: var(--primary); */
-  color: var(--secondary);
+nav .left img {
   padding: 8px;
+  width: 48px;
 }
 
 nav .right a {
@@ -68,32 +69,25 @@ nav .right a {
 }
 
 nav .right a:hover {
-  color: var(--primary);
-  border-bottom: 1px solid var(--primary);
+  color: var(--yellow);
+  border-bottom: 1px solid var(--yellow);
 }
 
 nav .right a[href="#contact1"]:hover {
   border-bottom: none;
 }
 
+
 nav .right button {
-  background-color: var(--primary);
-  color: var(--dark);
-  font-size: 1rem;
-  font-weight: 500;
-  border: 2px solid var(--primary);
+  background-color: var(--yellow);
+  color: var(--secondary);
+  border: 2px solid var(--yellow);
 }
 
 nav .right button:hover {
-  color: var(--primary);
+  color: var(--yellow);
   background-color: transparent;
-  border: 2px solid var(--primary);
-}
-
-@media only screen and (max-width: 960px) {
-  nav .right {
-    display: none;
-  }
+  border: 2px solid var(--yellow);
 }
 
 /* ----------------------------------------Home section ---------*/
@@ -104,78 +98,90 @@ nav .right button:hover {
   align-items: center;
   flex-wrap: wrap;
   gap: 32px;
-  padding: 100px;
+  padding: 6rem;
   background-color: var(--secondary);
   color: var(--secondary);
+  height: 700px;
   /* clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 22% 92%, 0px 100%); */
-}
-
-.home .left {
-  flex: 1;
-}
-
-.home .left img {
-  float: right;
-  object-fit: cover;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-    rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .home .right {
   flex: 1;
+  text-align: center;
+  /* background-color: #e9c46a; */
+  overflow: hidden;
+
 }
 
-.home .right h2,
-.home .right h3 span {
+.home .right img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.home .left {
+  flex: 1;
+  width: 100%;
+}
+
+.home .left h2{
+  margin-bottom: 4px;
   color: var(--tertiory);
-  padding-bottom: 6px;
-}
-
-.home .right h2 {
   font-size: 2.5rem;
   font-weight: 600;
 }
 
-.home .right p {
+.home .left h3{
+  color: var(--dark);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.home .left h3 span{
+  color: var(--yellow);
+}
+
+.home .left p {
   margin-top: 14px;
   color: var(--grey);
   margin: 16px 0px;
+  text-align: justify;
 }
 
-.home .right button {
+.home .left button {
   background-color: var(--secondary);
-  color: var(--primary);
-  border: 2px solid var(--primary);
+  color: var(--yellow);
+  border: 2px solid var(--yellow);
   margin-top: 24px;
 }
 
-.home .right button:hover {
-  background-color: var(--primary);
+.home .left button:hover {
+  background-color: var(--yellow);
   color: var(--secondary);
 }
 
 /*--------------------------------------------------------------contact me starts here!*/
 .contact-me {
-  padding: 100px;
+  max-width: 1024px;
+  padding: 6rem;
+  margin: 0 auto;
 }
 
 .contact-me .heading {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .contact-me .heading h2 {
-  font-size: 32px;
+  font-size: 2.4rem;
+  font-weight: 500;
   color: var(--dark);
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 2px;
 }
 
 .contact-me .heading p {
   color: var(--grey);
-  font-size: 16px;
-  letter-spacing: px;
+  font-size: 1rem;  
 }
 .contact-form {
   text-align: center;
@@ -184,14 +190,12 @@ nav .right button:hover {
 .contact-form .container input,
 .contact-form .container textarea {
   width: 100%;
-  border-radius: 5px;
-  border: 1px solid gray;
+  border-radius: 8px;
+  border: 1px solid var(--grey);
   font-family: inherit;
   font-weight: 500;
-  outline: none;
+  outline-color: var(--tertiory);
   padding: 16px;
-  letter-spacing: 1px;
-
   margin-bottom: 12px;
 }
 
@@ -200,28 +204,28 @@ nav .right button:hover {
 }
 
 .contact-form button {
-  background-color: var(--primary);
+  background-color: var(--yellow);
   color: var(--secondary);
-  border: 2px solid var(--primary);
+  border: 2px solid var(--yellow);
   margin-top: 12px;
 }
 
 .contact-form button:hover {
-  color: var(--primary);
+  color: var(--yellow);
   background-color: var(--secondary);
 }
 
 /* ---------------------------------------------------------Education */
 .education {
   background-color: var(--tertiory);
-  padding: 100px;
+  padding: 6rem;
 }
 
 .education .heading h2 {
   font-size: 2.4rem;
   font-weight: 500;
   border-bottom: 2px solid;
-  color: var(--primary);
+  color: var(--secondary);
   letter-spacing: 1.5pt;
   margin-bottom: 3rem;
   text-align: left;
@@ -252,6 +256,7 @@ nav .right button:hover {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--dark);
+  margin-top: 1rem;
 }
 
 .education .cards__container .card h3 span {
@@ -275,68 +280,25 @@ nav .right button:hover {
 /* --------------------------------------------------------------------certificates */
 
 .certificates {
-  /* background-image: url(/img/achievement.jpg); */
-  background-color: #24242458;
+  background-color: #26465324;
   background-size: cover;
-  padding: 100px;
+  padding: 6rem;
 }
 
 .certificates .heading h2 {
   font-size: 2.4rem;
   font-weight: 500;
   border-bottom: 2px solid;
-  color: var(--primary);
+  color: var(--dark);
   letter-spacing: 1.5pt;
   margin-bottom: 3rem;
 }
 
 .certificates .cards__container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-areas:
-    "a b c d"
-    "e f g h"
-    "i j k l";
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   margin: 0 auto;
-}
-
-.certificates .card1 {
-  grid-area: a;
-}
-.certificates .card2 {
-  grid-area: b;
-}
-.certificates .card3 {
-  grid-area: c;
-}
-.certificates .card4 {
-  grid-area: d;
-}
-.certificates .card5 {
-  grid-area: e;
-}
-.certificates .card6 {
-  grid-area: f;
-}
-.certificates .card7 {
-  grid-area: g;
-}
-.certificates .card8 {
-  grid-area: h;
-}
-.certificates .card9 {
-  grid-area: i;
-}
-.certificates .card10 {
-  grid-area: j;
-}
-.certificates .card11 {
-  grid-area: k;
-}
-.certificates .card12 {
-  grid-area: l;
 }
 
 .certificates .cards__container .card img {
@@ -368,18 +330,16 @@ nav .right button:hover {
 /* ---------------------------------------------------skills starts here */
 .skills {
   background-color: var(--tertiory);
-  padding: 100px;
+  padding: 6rem;
 }
 
 .skills .heading h2 {
-  font-size: 2rem;
-  font-weight: 700;
-
-  color: var(--primary);
-  letter-spacing: 2pt;
-  padding: 20px;
-  padding-bottom: 30px;
-  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 500;
+  border-bottom: 2px solid;
+  color: var(--secondary);
+  letter-spacing: 1.5pt;
+  margin-bottom: 3rem;
 }
 
 .skills .container {
@@ -387,30 +347,25 @@ nav .right button:hover {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
+  gap: 1.5rem;
   text-align: center;
-
-  /* padding: 20px ; */
 }
 
 .skills .container .skill__card {
   background-color: rgb(244, 236, 236);
-  margin: 20px;
-  padding: 10px;
-  padding-right: 15px;
-  padding-left: 15px;
-
+  padding: .6rem;
   border-radius: 4px;
 }
 
-section.skills .container .skill__card img {
-  width: 100px;
-  height: 100px;
+.skills .container .skill__card img {
+  width: 80px;
+  height: 80px;
 }
 
-section.skills .container .skill__card progress {
+.skills .container .skill__card progress {
   width: 90px;
-  height: 20px;
+  height: 12px;
+  margin-top: 8px;
 }
 
 .text-center {
@@ -422,5 +377,49 @@ section.skills .container .skill__card progress {
 footer {
   text-align: center;
   background-color: var(--tertiory);
-  padding: 100px;
+  padding: 3rem;
+}
+
+
+/* add @media for responsiveness */
+@media screen and (max-width: 972px) {
+  .home{
+    flex-direction: column-reverse;
+
+    height: auto;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  nav .right {
+    display: none;
+  }
+
+  section.home,
+  section.education,
+  section.certificates,
+  section.skills,
+  section.contact-me{
+    padding: 4rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  section.home,
+  section.education,
+  section.certificates,
+  section.skills,
+  section.contact-me{
+    padding: 2rem;
+  }
+
+  .right img{
+    width: 100%;
+  }
+
+  nav {
+    padding-left: 2rem;
+  }
 }
