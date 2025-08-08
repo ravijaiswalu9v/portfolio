@@ -6,7 +6,7 @@
   --tertiory: #1F3A93;
   --dark: #242424;
   --grey: #565656;
-  --yellow: rgb(231, 201, 80);
+  --yellow: #e7c950;
   --orange: #FF6B35;
   --brick: #e76f51;
 }
@@ -158,6 +158,169 @@ nav .right button:hover {
   background-color: var(--yellow);
   color: var(--secondary);
 }
+
+/* ------------------------------------------------------------Experience section starts here*/
+.experience {
+  background-color: #26465324;
+  background-size: cover;
+  padding: 6rem;
+  padding-bottom: 0rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience .heading h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  border-bottom: 2px solid;
+  color: var(--secondary);
+  letter-spacing: 1.5pt;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.experience .cards__container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.experience .cards__container::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background: linear-gradient(var(--yellow), var(--tertiory));
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.experience .cards__container .card {
+  padding: 20px 30px;
+  position: relative;
+  background: var(--secondary);
+  width: calc(50% - 40px);
+  margin: 30px 0;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience .cards__container .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Position cards on left and right */
+.experience .cards__container .card:nth-child(odd) {
+  left: 0;
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.experience .cards__container .card:nth-child(even) {
+  left: 50%;
+  animation: slideInRight 0.6s ease-out;
+}
+
+/* Arrow pointers for cards */
+.experience .cards__container .card::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--secondary);
+  top: 28px;
+  transform: rotate(45deg);
+  box-shadow: 2px -2px 8px rgba(0,0,0,0.05);
+}
+
+.experience .cards__container .card:nth-child(odd)::before {
+  right: -10px;
+}
+
+.experience .cards__container .card:nth-child(even)::before {
+  left: -10px;
+}
+
+/* Timeline dots */
+.experience .cards__container .card::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: var(--yellow);
+  border: 4px solid var(--tertiory);
+  border-radius: 50%;
+  top: 26px;
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.7);
+  z-index: 1;
+}
+
+.experience .cards__container .card:nth-child(odd)::after {
+  right: -52px;
+}
+
+.experience .cards__container .card:nth-child(even)::after {
+  left: -52px;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 4rem;
+    padding-bottom: 0rem;
+  }
+  .experience .cards__container::before {
+    left: 30px;
+  }
+  .experience .cards__container .card {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+  }
+  .experience .cards__container .card:nth-child(even),
+  .experience .cards__container .card:nth-child(odd) {
+    left: 0;
+  }
+  .experience .cards__container .card::before {
+    left: -10px;
+  }
+  .experience .cards__container .card::after {
+    left: -52px;
+  }
+}
+
+@media (max-width: 448px) {
+  .experience {
+    padding: 2rem;
+    padding-bottom: 0rem;
+  }
+}
+
 
 /*--------------------------------------------------------------contact me starts here!*/
 .contact-me {
