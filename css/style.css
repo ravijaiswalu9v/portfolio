@@ -79,15 +79,14 @@ nav .right a[href="#contact1"]:hover {
 
 
 nav .right button {
-  background-color: var(--yellow);
-  color: var(--secondary);
+  background-color: transparent;
+  color: var(--yellow);
   border: 2px solid var(--yellow);
 }
 
 nav .right button:hover {
-  color: var(--yellow);
-  background-color: transparent;
-  border: 2px solid var(--yellow);
+  color: var(--secondary);
+  background-color: var(--yellow);
 }
 
 /* ----------------------------------------Home section ---------*/
@@ -148,15 +147,15 @@ nav .right button:hover {
 }
 
 .home .left button {
-  background-color: var(--secondary);
-  color: var(--yellow);
+  background-color: var(--yellow);
+  color: var(--secondary);
   border: 2px solid var(--yellow);
   margin-top: 24px;
 }
 
 .home .left button:hover {
-  background-color: var(--yellow);
-  color: var(--secondary);
+  background-color: var(--secondary);
+  color: var(--yellow);
 }
 
 /* ------------------------------------------------------------Experience section starts here*/
